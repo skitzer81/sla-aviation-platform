@@ -1,0 +1,452 @@
+:root {
+  --sla-royal-blue: #0a3f8f;
+  --sla-deep-navy: #061f49;
+  --sla-silver: #c9ced8;
+  --sla-cloud: #f4f7fb;
+  --sla-white: #ffffff;
+  --sla-ink: #10213b;
+  --sla-muted: #66748b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--sla-white);
+  color: var(--sla-ink);
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 78px;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e7ebf2;
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandMark {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--sla-royal-blue), #4674c5);
+  box-shadow: 0 10px 28px rgba(10, 63, 143, 0.22);
+}
+
+.brandText {
+  display: grid;
+  gap: 7px;
+  line-height: 0.9;
+}
+
+.brandText strong {
+  font-size: 20px;
+}
+
+.brandText small {
+  color: #5d6d84;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--sla-royal-blue);
+}
+
+.signInButton {
+  padding: 10px 18px;
+  border: 1px solid #cbd5e2;
+  border-radius: 999px;
+  background: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  min-height: 720px;
+  padding: 115px 5vw 82px;
+  overflow: hidden;
+  color: white;
+  background:
+    linear-gradient(
+      128deg,
+      #041831,
+      var(--sla-deep-navy) 32%,
+      var(--sla-royal-blue) 72%,
+      #7294ce
+    );
+}
+
+.heroGlow {
+  position: absolute;
+  top: -300px;
+  right: -160px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  filter: blur(25px);
+}
+
+.heroContent {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+}
+
+.darkEyebrow {
+  color: var(--sla-royal-blue);
+}
+
+.hero h1 {
+  max-width: 950px;
+  margin: 22px 0;
+  font-size: clamp(54px, 7vw, 94px);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.heroDescription {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.flightSearch {
+  margin-top: 70px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1fr 1fr auto;
+  gap: 12px;
+  color: var(--sla-ink);
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.26);
+}
+
+.flightSearch label {
+  display: grid;
+  gap: 8px;
+  color: #53627a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.flightSearch input,
+.flightSearch select {
+  min-height: 50px;
+  padding: 0 14px;
+  color: var(--sla-ink);
+  background: white;
+  border: 1px solid #dbe2ec;
+  border-radius: 10px;
+}
+
+.flightSearch button,
+.investorSection button {
+  min-height: 50px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--sla-royal-blue);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.flightSearch button {
+  align-self: end;
+}
+
+.flightSearch button:hover,
+.investorSection button:hover {
+  background: #073473;
+}
+
+.destinationsSection {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 110px 5vw;
+}
+
+.sectionHeading {
+  margin-bottom: 42px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sectionHeading h2,
+.experienceSection h2,
+.investorSection h2 {
+  margin: 12px 0 0;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.sectionHeading > p {
+  max-width: 450px;
+  color: var(--sla-muted);
+  line-height: 1.7;
+}
+
+.destinationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.destinationCard {
+  min-height: 330px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 20px 50px rgba(15, 42, 87, 0.15);
+}
+
+.destinationCard1 {
+  background: linear-gradient(150deg, #071c3e, #0b4ba5 60%, #88a6d7);
+}
+
+.destinationCard2 {
+  background: linear-gradient(150deg, #10335f, #3c699e 60%, #bdcadc);
+}
+
+.destinationCard3 {
+  background: linear-gradient(150deg, #052a52, #176aa0 60%, #92c6d9);
+}
+
+.airportCode {
+  align-self: flex-end;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  opacity: 0.8;
+}
+
+.destinationCard p {
+  margin: 0 0 8px;
+  opacity: 0.72;
+}
+
+.destinationCard h3 {
+  margin: 0 0 24px;
+  font-size: 38px;
+}
+
+.destinationCard a {
+  font-weight: 800;
+}
+
+.experienceSection {
+  padding: 110px 5vw;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+  color: white;
+  background: var(--sla-deep-navy);
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.featureGrid article {
+  min-height: 240px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+}
+
+.featureGrid span {
+  color: #91aee1;
+  font-weight: 900;
+}
+
+.featureGrid h3 {
+  margin-top: 70px;
+  font-size: 21px;
+}
+
+.featureGrid p {
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+
+.investorSection {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 130px 5vw;
+  text-align: center;
+}
+
+.investorSection > p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 25px auto;
+  color: var(--sla-muted);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.investorSection button {
+  padding: 0 28px;
+}
+
+footer {
+  min-height: 150px;
+  padding: 40px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background: #03142e;
+}
+
+.footerBrand .brandText small {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+}
+
+@media (max-width: 960px) {
+  nav {
+    display: none;
+  }
+
+  .flightSearch {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flightSearch button {
+    grid-column: 1 / -1;
+  }
+
+  .destinationGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .experienceSection {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid h3 {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .siteHeader {
+    padding: 0 20px;
+  }
+
+  .signInButton {
+    display: none;
+  }
+
+  .hero {
+    padding: 85px 20px 60px;
+  }
+
+  .flightSearch {
+    grid-template-columns: 1fr;
+  }
+
+  .flightSearch button {
+    grid-column: auto;
+  }
+
+  .destinationsSection {
+    padding: 80px 20px;
+  }
+
+  .sectionHeading {
+    display: block;
+  }
+
+  .destinationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .experienceSection {
+    padding: 80px 20px;
+  }
+
+  .investorSection {
+    padding: 90px 20px;
+  }
+
+  footer {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+}
