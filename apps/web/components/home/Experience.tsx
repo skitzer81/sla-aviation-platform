@@ -4,33 +4,32 @@ export default function Experience() {
       number: "01",
       title: "Refined comfort",
       description:
-        "Elegant cabin design, thoughtful service and premium dining crafted for long-haul travel.",
+        "Spacious seating, thoughtful cabin details and a calm long-haul environment.",
     },
     {
       number: "02",
       title: "Seamless journeys",
       description:
-        "Fast connections, clear boarding and digital support across Scotland and Africa.",
+        "Clear digital communication, efficient boarding and simplified travel management.",
     },
     {
       number: "03",
       title: "Dedicated support",
       description:
-        "Local teams deliver personalised attention and reliable assistance every step of the way.",
+        "Responsive service shaped by local knowledge, professionalism and cultural understanding.",
     },
   ];
 
   return (
-    <section className="experienceSection" id="experience">
-      <div className="sectionHeading">
-        <div>
+    <section className="experienceSection" id="experience" aria-labelledby="experience-heading">
+      <div className="sectionHeading experienceHeading">
+        <div className="experienceHeadingText">
           <p className="eyebrow">THE SLA STANDARD</p>
-          <h2>Premium experience for every international journey.</h2>
+          <h2 id="experience-heading">Refined service. Meaningful hospitality.</h2>
         </div>
 
-        <p>
-          Our premium service blends Scottish refinement with African warmth across every cabin
-          and connection.
+        <p className="experienceIntro">
+          Every stage of the journey is designed around comfort, clarity and genuine care.
         </p>
       </div>
 
@@ -43,6 +42,8 @@ export default function Experience() {
           </article>
         ))}
       </div>
+
+      <p className="experienceBrandStatement">Scottish precision. African hospitality.</p>
     </section>
   );
 }

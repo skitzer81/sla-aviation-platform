@@ -1,0 +1,118 @@
+:root {
+  /* Brand colours */
+  --sla-navy-950: #031633;
+  --sla-navy-900: #041e42;
+  --sla-navy-800: #08295a;
+
+  --sla-blue-700: #0b4ea2;
+  --sla-blue-600: #0f5bd7;
+  --sla-blue-500: #2f73df;
+  --sla-blue-100: #eaf2ff;
+
+  --sla-gold-500: #d9b35f;
+  --sla-gold-300: #f0d58f;
+
+  --sla-white: #ffffff;
+  --sla-grey-50: #f7f9fc;
+  --sla-grey-100: #eef2f7;
+  --sla-grey-200: #e1e7ef;
+  --sla-grey-300: #cbd4e0;
+  --sla-grey-500: #738198;
+  --sla-grey-700: #40506a;
+  --sla-ink: #10213b;
+
+  /* Semantic colours */
+  --sla-colour-primary: var(--sla-blue-600);
+  --sla-colour-primary-hover: var(--sla-blue-700);
+  --sla-colour-header: var(--sla-navy-950);
+  --sla-colour-background: var(--sla-grey-50);
+  --sla-colour-surface: var(--sla-white);
+  --sla-colour-border: var(--sla-grey-200);
+  --sla-colour-text: var(--sla-ink);
+  --sla-colour-text-muted: var(--sla-grey-500);
+  --sla-colour-premium: var(--sla-gold-500);
+
+  /* Typography */
+  --sla-font-ui:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  --sla-font-display:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  --sla-text-xs: 0.75rem;
+  --sla-text-sm: 0.875rem;
+  --sla-text-base: 1rem;
+  --sla-text-lg: 1.125rem;
+  --sla-text-xl: 1.375rem;
+  --sla-text-2xl: 1.75rem;
+  --sla-text-3xl: 2.25rem;
+  --sla-text-4xl: 3rem;
+  --sla-text-display: clamp(2.6rem, 5vw, 4.5rem);
+
+  --sla-leading-tight: 1.05;
+  --sla-leading-heading: 1.15;
+  --sla-leading-body: 1.6;
+
+  --sla-weight-regular: 400;
+  --sla-weight-medium: 500;
+  --sla-weight-semibold: 600;
+  --sla-weight-bold: 700;
+  --sla-weight-extrabold: 800;
+
+  /* Spacing — 8px system */
+  --sla-space-1: 0.25rem;
+  --sla-space-2: 0.5rem;
+  --sla-space-3: 0.75rem;
+  --sla-space-4: 1rem;
+  --sla-space-5: 1.5rem;
+  --sla-space-6: 2rem;
+  --sla-space-7: 3rem;
+  --sla-space-8: 4rem;
+  --sla-space-9: 6rem;
+  --sla-space-10: 8rem;
+
+  /* Layout */
+  --sla-container: 90rem;
+  --sla-container-booking: 74rem;
+  --sla-page-padding: clamp(1rem, 4vw, 3rem);
+
+  /* Radius */
+  --sla-radius-sm: 0.625rem;
+  --sla-radius-md: 0.875rem;
+  --sla-radius-lg: 1.25rem;
+  --sla-radius-xl: 1.5rem;
+  --sla-radius-2xl: 1.75rem;
+  --sla-radius-pill: 9999px;
+
+  /* Shadows */
+  --sla-shadow-sm:
+    0 8px 24px rgba(3, 24, 61, 0.08);
+
+  --sla-shadow-card:
+    0 12px 40px rgba(3, 24, 61, 0.1);
+
+  --sla-shadow-floating:
+    0 24px 80px rgba(3, 24, 61, 0.16);
+
+  /* Borders */
+  --sla-border-width: 1px;
+  --sla-border-standard:
+    var(--sla-border-width) solid var(--sla-colour-border);
+
+  /* Controls */
+  --sla-control-height: 3.5rem;
+  --sla-button-height: 3.5rem;
+  --sla-header-height: 5.75rem;
+
+  /* Motion */
+  --sla-duration-fast: 140ms;
+  --sla-duration-standard: 220ms;
+  --sla-duration-slow: 320ms;
+
+  --sla-ease:
+    cubic-bezier(0.2, 0.8, 0.2, 1);
+}

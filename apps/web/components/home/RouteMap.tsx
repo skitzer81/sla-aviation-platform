@@ -1,39 +1,46 @@
 export default function RouteMap() {
   return (
-    <section className="routeSection">
+    <section className="routeSection" aria-labelledby="route-heading">
       <div className="routeHeader">
         <p className="eyebrow">SCOTLAND TO AFRICA</p>
-        <h2>Strong corridors for business, culture and premium travel.</h2>
+        <h2 id="route-heading">One network. Two regions. New possibilities.</h2>
         <p>
-          A refined Scotland-to-Africa route map built around Lagos, Accra,
-          Dakar, Banjul, Nairobi and Johannesburg.
+          SLA is building direct, reliable and premium connections between Scotland and Africa’s most important commercial, cultural and diaspora markets.
         </p>
       </div>
 
       <div className="routeMapGrid">
         <article className="routeCard">
-          <span>Gateway base</span>
-          <h3>Scotland hub</h3>
+          <span>Scotland gateway</span>
+          <h3>Glasgow and Edinburgh</h3>
           <p>
-            Glasgow, Edinburgh and Aberdeen offer seamless departures into our
-            African network.
+            Glasgow and Edinburgh provide strong access to the wider UK and European market.
           </p>
         </article>
 
         <div className="routeGraphic" aria-hidden="true">
           <div className="routeNode routeNodeStart">Scotland</div>
-          <div className="routeLine" />
+          <div className="routeLine routeLineStart" />
           <div className="routeNode routeNodeMid">Africa</div>
-          <div className="routeLine" />
-          <div className="routeNode routeNodeEnd">Global</div>
+          <div className="routeLine routeLineEnd" />
+          <div className="routeNode routeNodeEnd">Global Connections</div>
+          <div className="routeAircraft">✦</div>
         </div>
 
-        <article className="routeCard alt">
-          <span>Destination cluster</span>
-          <h3>African focus</h3>
+        <article className="routeCard">
+          <span>African network</span>
+          <h3>Strategic cluster</h3>
           <p>
-            Access growth markets with elevated service and consistent schedules
-            for travellers across continents.
+            Lagos, Accra, Banjul, Dakar, Nairobi and Johannesburg form the first strategic route cluster.
+          </p>
+        </article>
+      </div>
+
+      <div className="routeInfoGrid">
+        <article className="routeInfoCard">
+          <span>Future connectivity</span>
+          <p>
+            Expansion will be based on route economics, demand, partnerships and operational readiness.
           </p>
         </article>
       </div>

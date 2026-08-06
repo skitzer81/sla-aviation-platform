@@ -1,0 +1,103 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.symbol {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50% 50% 46% 46%;
+  background: linear-gradient(
+    135deg,
+    #f0d58f 0%,
+    #ffffff 48%,
+    #d9b35f 100%
+  );
+  box-shadow: 0 8px 24px rgba(3, 24, 61, 0.2);
+}
+
+.wing {
+  color: #031633;
+  font-weight: 900;
+  transform: skewX(-8deg);
+}
+
+.wordmark {
+  display: grid;
+  gap: 5px;
+}
+
+.wordmark strong {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.wordmark small {
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  opacity: 0.72;
+}
+
+.light {
+  color: #ffffff;
+}
+
+.dark {
+  color: #031633;
+}
+
+.small .symbol {
+  width: 38px;
+  height: 32px;
+}
+
+.small .wing {
+  font-size: 15px;
+}
+
+.small .wordmark strong {
+  font-size: 19px;
+}
+
+.small .wordmark small {
+  font-size: 8px;
+}
+
+.medium .symbol {
+  width: 50px;
+  height: 40px;
+}
+
+.medium .wing {
+  font-size: 19px;
+}
+
+.medium .wordmark strong {
+  font-size: 26px;
+}
+
+.medium .wordmark small {
+  font-size: 9px;
+}
+
+.large .symbol {
+  width: 64px;
+  height: 52px;
+}
+
+.large .wing {
+  font-size: 24px;
+}
+
+.large .wordmark strong {
+  font-size: 34px;
+}
+
+.large .wordmark small {
+  font-size: 11px;
+}

@@ -1,45 +1,45 @@
 export default function Investor() {
-  return (
-    <section className="investorSection" id="investors">
-      <div className="sectionHeading">
-        <div>
-          <p className="eyebrow">PROJECT BAOBAB</p>
-          <h2>Building a modern aviation ecosystem.</h2>
-        </div>
+  const pillars = [
+    {
+      title: "Strategic routes",
+      description:
+        "Focused on underserved Scotland–Africa corridors with diaspora, business, tourism and cargo potential.",
+    },
+    {
+      title: "Premium operations",
+      description:
+        "A service model built around reliability, customer relevance and disciplined growth.",
+    },
+    {
+      title: "Scalable platform",
+      description:
+        "SLA OS provides a shared digital foundation for passenger travel, cargo, customer service and future aviation services.",
+    },
+  ];
 
-        <p>
-          SLA Aviation Group combines passenger service, cargo and digital commerce
-          into one efficient, scalable platform.
+  return (
+    <section className="investorSection" id="investors" aria-labelledby="investor-heading">
+      <div className="investorIntro">
+        <p className="eyebrow">INVESTMENT CASE</p>
+        <h2 id="investor-heading">Building a focused Scotland–Africa aviation platform.</h2>
+        <p className="investorIntroCopy">
+          SLA Aviation Group is being developed around disciplined route selection, premium customer experience, digital-first distribution and scalable operating infrastructure.
         </p>
       </div>
 
       <div className="investorGrid">
-        <article>
-          <h3>Strategic routes</h3>
-          <p>
-            Focused on high-demand corridors with strong trade, diaspora and tourism
-            potential.
-          </p>
-        </article>
-
-        <article>
-          <h3>Premium operations</h3>
-          <p>
-            A premium product built on consistent service, local expertise and
-            operational resilience.
-          </p>
-        </article>
-
-        <article>
-          <h3>Future growth</h3>
-          <p>
-            Investment in technology, infrastructure and partnerships to scale the
-            airline sustainably.
-          </p>
-        </article>
+        {pillars.map((pillar) => (
+          <article key={pillar.title}>
+            <h3>{pillar.title}</h3>
+            <p>{pillar.description}</p>
+          </article>
+        ))}
       </div>
 
-      <button type="button">Investor information</button>
+      <p className="investorCredibility">Built for long-term value, not short-term headlines.</p>
+      <a href="#investors" className="investorCta">
+        View investor information
+      </a>
     </section>
   );
 }

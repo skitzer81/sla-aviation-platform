@@ -1,21 +1,18 @@
-import FlightSearch from "./FlightSearch";
+import BookingWidget from "./BookingWidget";
 
 export default function Hero() {
   return (
-    <section className="hero" id="book">
-      <div className="heroGlow" />
+    <section className="bookingHero" aria-labelledby="booking-title">
+      <div className="bookingHeroBackdrop" aria-hidden="true">
+        <div className="bookingHeroMountain" />
+        <div className="bookingHeroSkyline" />
+        <div className="bookingHeroAircraft">✈</div>
+      </div>
 
-      <div className="heroContent">
-        <div className="heroIntro">
-          <p className="eyebrow brightEyebrow">SLA AVIATION GROUP</p>
-          <h1>Premium journeys. Direct connections.</h1>
-          <p className="heroDescription">
-            A world-class airline built to connect Scotland, Africa and the globe
-            with confidence, comfort and curated service.
-          </p>
-        </div>
+      <div className="bookingHeroInner">
+        <h1 id="booking-title">Where are you flying?</h1>
 
-        <FlightSearch />
+        <BookingWidget />
       </div>
     </section>
   );
