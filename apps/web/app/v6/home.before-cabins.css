@@ -1,0 +1,954 @@
+:root {
+  --sla-navy: #061b3d;
+  --sla-deep: #03142d;
+  --sla-blue: #0065bd;
+  --sla-gold: #dda112;
+  --sla-line: #dce3ea;
+  --sla-muted: #6e7a89;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.slaV6 {
+  background: #ffffff;
+  color: var(--sla-navy);
+}
+
+/* TOP BAR */
+
+.utilityBar {
+  height: 42px;
+  background: var(--sla-navy);
+  color: #ffffff;
+}
+
+.utilityInner {
+  max-width: 1450px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 12px;
+}
+
+.utilityLeft,
+.utilityRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.utilityGold {
+  color: #e9aa22;
+}
+
+.utilityDivider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255,255,255,.24);
+}
+
+.utilityRight a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HEADER */
+
+.mainHeader {
+  height: 100px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8ebef;
+}
+
+.headerInner {
+  max-width: 1450px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 34px;
+
+  display: grid;
+  grid-template-columns: 250px 1fr auto;
+  align-items: center;
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--sla-navy);
+}
+
+.brandMark {
+  color: var(--sla-gold);
+  font-family: Georgia, serif;
+  font-size: 58px;
+  line-height: .7;
+}
+
+.brandWords strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 31px;
+  letter-spacing: 5px;
+}
+
+.brandWords small {
+  display: block;
+  margin-top: 3px;
+  font-size: 8px;
+  letter-spacing: 6px;
+}
+
+.mainNav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.mainNav a {
+  color: var(--sla-navy);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.mainNav a:hover {
+  color: var(--sla-blue);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.headerActions button {
+  border: 0;
+  background: transparent;
+  color: var(--sla-navy);
+  font-weight: 750;
+}
+
+.topBookButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 112px;
+  height: 49px;
+
+  background: var(--sla-gold);
+  color: #ffffff;
+  text-decoration: none;
+
+  border-radius: 4px;
+  font-weight: 850;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  height: 510px;
+
+  background:
+    url("/hero/sla-hero-approved.png")
+    center 47% / cover no-repeat;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,27,59,.18) 0%,
+      rgba(4,27,59,.03) 48%,
+      transparent 75%
+    );
+}
+
+/* BOOKING PANEL */
+
+.bookingShell {
+  position: relative;
+  z-index: 10;
+
+  width: min(1380px, 92vw);
+  margin: -82px auto 0;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 35px rgba(4,24,52,.18);
+}
+
+.bookingTabs {
+  min-height: 74px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-bottom: 1px solid var(--sla-line);
+}
+
+.bookingTabs button {
+  border: 0;
+  border-right: 1px solid var(--sla-line);
+
+  background: #ffffff;
+  color: #44546a;
+
+  font-size: 15px;
+  font-weight: 650;
+
+  cursor: pointer;
+}
+
+.bookingTabs button span {
+  margin-right: 12px;
+  color: var(--sla-navy);
+}
+
+.bookingTabs button:last-child {
+  border-right: 0;
+}
+
+.bookingTabs .activeBookingTab {
+  color: var(--sla-navy);
+  font-weight: 850;
+
+  box-shadow:
+    inset 0 -4px var(--sla-gold);
+}
+
+.realBookingWidget {
+  padding: 14px 18px 20px;
+  background: #ffffff;
+}
+
+/* Remove extra outer styling from the existing widget */
+
+.realBookingWidget form {
+  box-shadow: none !important;
+}
+
+/* DESTINATIONS */
+
+.destinationsSection {
+  padding: 72px 34px 100px;
+  background: #ffffff;
+}
+
+.destinationsHeading {
+  max-width: 900px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.headingOrnament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.headingOrnament span {
+  width: 40px;
+  height: 1px;
+  background: var(--sla-gold);
+}
+
+.headingOrnament strong {
+  color: var(--sla-gold);
+  font-size: 28px;
+  font-family: Georgia, serif;
+}
+
+.destinationsHeading h2 {
+  margin: 5px 0 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.destinationGrid {
+  max-width: 1380px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.destinationCard {
+  position: relative;
+  height: 330px;
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 24px rgba(5,27,61,.10);
+}
+
+.destinationShade {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      transparent 36%,
+      rgba(3,20,47,.90)
+    );
+}
+
+.destinationContent {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+
+  color: white;
+}
+
+.destinationContent h3 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.destinationContent p {
+  margin: 3px 0;
+}
+
+.destinationContent small {
+  color: #dbe7f4;
+}
+
+.destinationContent button {
+  display: block;
+  margin-top: 16px;
+
+  padding: 10px 16px;
+
+  border: 1px solid rgba(255,255,255,.9);
+  background: rgba(3,24,55,.60);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+/* EXPERIENCE */
+
+.experienceSection {
+  padding: 95px 34px;
+  background: #f5f6f7;
+}
+
+.experienceHeading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.experienceHeading > span {
+  color: var(--sla-gold);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.experienceHeading h2 {
+  margin: 10px 0 0;
+
+  font-family: Georgia, serif;
+  font-size: 43px;
+  font-weight: 400;
+}
+
+.experienceGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.experienceCard {
+  min-height: 300px;
+
+  padding: 38px;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.experienceCard > span {
+  color: var(--sla-blue);
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.experienceCard h3 {
+  margin: 9px 0;
+
+  font-family: Georgia, serif;
+  font-size: 31px;
+  font-weight: 400;
+}
+
+.experienceCard p {
+  color: var(--sla-muted);
+}
+
+.experienceCard.caledonia {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #061b3d,
+      #074e91
+    );
+
+  border-top: 5px solid var(--sla-gold);
+}
+
+.experienceCard.caledonia > span {
+  color: var(--sla-gold);
+}
+
+.experienceCard.caledonia p {
+  color: #d4e0ed;
+}
+
+/* FOOTER */
+
+.footer {
+  padding:
+    70px
+    max(34px, calc((100vw - 1220px) / 2))
+    28px;
+
+  background: #202020;
+  color: #ffffff;
+}
+
+.footerColumns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 48px;
+
+  padding-bottom: 50px;
+
+  border-bottom: 1px solid #444;
+}
+
+.footerColumns h4 {
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+.footerColumns a {
+  display: block;
+
+  margin: 10px 0;
+
+  color: #aaa;
+
+  font-size: 13px;
+}
+
+.footerBottom {
+  padding-top: 32px;
+
+  color: #999;
+
+  font-size: 11px;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+}
+
+.footerLogo span {
+  color: var(--sla-gold);
+  font-size: 36px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+  .headerInner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .mainNav {
+    display: none;
+  }
+
+  .destinationGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .utilityBar {
+    display: none;
+  }
+
+  .mainHeader {
+    height: 82px;
+  }
+
+  .hero {
+    height: 440px;
+    background-position: 64% center;
+  }
+
+  .bookingShell {
+    width: calc(100% - 20px);
+    margin-top: -35px;
+  }
+
+  .bookingTabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bookingTabs button {
+    min-height: 65px;
+  }
+
+  .destinationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerColumns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   HERO FIX — hide booking UI baked into old hero artwork
+   ========================================================= */
+
+.hero {
+  height: 500px !important;
+
+  background-image:
+    url("/hero/sla-hero-approved.png") !important;
+
+  background-size: cover !important;
+
+  /*
+   Keep the aircraft and skyline visible while cropping
+   the old booking interface baked into the bottom.
+  */
+  background-position: center 30% !important;
+
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   SLA BOOKING PRODUCTS
+   ========================================================= */
+
+.bookingProductRow {
+  display: flex;
+  gap: 0;
+  padding: 20px 22px 0;
+  background: #ffffff;
+}
+
+.bookingProductRow button {
+  min-width: 150px;
+  height: 46px;
+  padding: 0 24px;
+
+  border: 1px solid #cad3dd;
+  background: #ffffff;
+
+  color: #536174;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.bookingProductRow button + button {
+  margin-left: -1px;
+}
+
+.bookingProductRow .bookingProductActive {
+  color: var(--sla-navy);
+  border-color: var(--sla-gold);
+  box-shadow: inset 0 -3px var(--sla-gold);
+}
+
+/* =========================================================
+   SLA SERVICES
+   ========================================================= */
+
+.slaServices {
+  width: min(1380px, 92vw);
+  margin: 28px auto 0;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  background: #ffffff;
+
+  border: 1px solid #dfe5eb;
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 24px rgba(4, 25, 57, .07);
+}
+
+.serviceItem {
+  min-height: 150px;
+
+  padding: 24px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: var(--sla-navy);
+
+  border-right: 1px solid #e2e7ec;
+
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.serviceItem:last-child {
+  border-right: 0;
+}
+
+.serviceItem:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.serviceSymbol {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 11px;
+
+  border: 1px solid #dce3ea;
+  border-radius: 50%;
+
+  color: var(--sla-blue);
+
+  font-size: 22px;
+}
+
+.serviceItem strong {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.serviceItem small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #7b8795;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.featuredService {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f7f2e7
+    );
+}
+
+.featuredService .serviceSymbol {
+  color: var(--sla-gold);
+  border-color: #e9d5a1;
+}
+
+/* Make destinations sit naturally below services */
+
+.destinationsSection {
+  padding-top: 76px;
+}
+
+@media (max-width: 1200px) {
+  .servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .serviceItem:nth-child(4) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .bookingProductRow {
+    padding: 14px 12px 0;
+  }
+
+  .bookingProductRow button {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serviceItem {
+    min-height: 135px;
+  }
+
+  .serviceItem:nth-child(even) {
+    border-right: 0;
+  }
+}
+
+/* =========================================================
+   SLA BOOKING PRODUCTS
+   ========================================================= */
+
+.bookingProductRow {
+  display: flex;
+  gap: 0;
+  padding: 20px 22px 0;
+  background: #ffffff;
+}
+
+.bookingProductRow button {
+  min-width: 150px;
+  height: 46px;
+  padding: 0 24px;
+
+  border: 1px solid #cad3dd;
+  background: #ffffff;
+
+  color: #536174;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.bookingProductRow button + button {
+  margin-left: -1px;
+}
+
+.bookingProductRow .bookingProductActive {
+  color: var(--sla-navy);
+  border-color: var(--sla-gold);
+  box-shadow: inset 0 -3px var(--sla-gold);
+}
+
+/* =========================================================
+   SLA SERVICES
+   ========================================================= */
+
+.slaServices {
+  width: min(1380px, 92vw);
+  margin: 28px auto 0;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  background: #ffffff;
+
+  border: 1px solid #dfe5eb;
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 24px rgba(4, 25, 57, .07);
+}
+
+.serviceItem {
+  min-height: 150px;
+
+  padding: 24px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: var(--sla-navy);
+
+  border-right: 1px solid #e2e7ec;
+
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.serviceItem:last-child {
+  border-right: 0;
+}
+
+.serviceItem:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.serviceSymbol {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 11px;
+
+  border: 1px solid #dce3ea;
+  border-radius: 50%;
+
+  color: var(--sla-blue);
+
+  font-size: 22px;
+}
+
+.serviceItem strong {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.serviceItem small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #7b8795;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.featuredService {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f7f2e7
+    );
+}
+
+.featuredService .serviceSymbol {
+  color: var(--sla-gold);
+  border-color: #e9d5a1;
+}
+
+/* Make destinations sit naturally below services */
+
+.destinationsSection {
+  padding-top: 76px;
+}
+
+@media (max-width: 1200px) {
+  .servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .serviceItem:nth-child(4) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .bookingProductRow {
+    padding: 14px 12px 0;
+  }
+
+  .bookingProductRow button {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serviceItem {
+    min-height: 135px;
+  }
+
+  .serviceItem:nth-child(even) {
+    border-right: 0;
+  }
+}

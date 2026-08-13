@@ -1,0 +1,277 @@
+.searchPage {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #071d41;
+}
+
+.searchPageHeader {
+  background: #ffffff;
+  border-bottom: 1px solid #e4eaf2;
+}
+
+.searchPageHeaderInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 22px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchPageHeader h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #071d41;
+}
+
+.searchPageHeader p {
+  margin: 4px 0 0;
+  color: #708198;
+  font-size: 13px;
+}
+
+.searchPageHeader a {
+  color: #071d41;
+  text-decoration: none;
+  border: 1px solid #cbd6e4;
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-weight: 800;
+}
+
+.searchPageMain {
+  padding: 52px 40px 90px;
+}
+
+.searchResultsContainer {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.searchResultsIntro .eyebrow {
+  margin: 0;
+  color: #0065bd;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.searchResultsIntro h2 {
+  margin: 10px 0;
+  color: #071d41;
+  font-size: 46px;
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.searchResultsIntro > p {
+  color: #64768e;
+  font-size: 17px;
+}
+
+.searchResultsMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0 30px;
+}
+
+.searchResultsMeta > * {
+  background: #ffffff;
+  border: 1px solid #dce4ee;
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: #52657d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.searchResultsList {
+  display: grid;
+  gap: 18px;
+}
+
+.searchResultCard {
+  background: #ffffff;
+  border: 1px solid #dfe7f1;
+  border-radius: 22px;
+  padding: 25px 28px;
+  box-shadow: 0 12px 35px rgba(12,42,77,.07);
+}
+
+.searchResultCardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.searchResultCardTop h3 {
+  margin: 0;
+  color: #071d41;
+  font-size: 22px;
+}
+
+.searchResultBadge {
+  background: #edf6ff;
+  color: #0065bd;
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.searchResultRoute {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.searchResultRoute strong {
+  color: #071d41;
+  font-size: 30px;
+}
+
+.searchResultRoute span {
+  color: #d5a62e;
+  font-size: 22px;
+}
+
+.searchResultDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 18px 0;
+  color: #63758c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.searchResultFares {
+  border-top: 1px solid #edf1f6;
+  padding-top: 20px;
+}
+
+.fareChoices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.fareChoices button {
+  min-height: 78px;
+  background: #ffffff;
+  border: 1px solid #d9e3ee;
+  border-radius: 14px;
+  padding: 13px 16px;
+  color: #071d41;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.fareChoices button:hover {
+  border-color: #0065bd;
+  background: #f4f9ff;
+}
+
+.fareChoices button.selected {
+  background: #edf6ff;
+  border: 2px solid #0065bd;
+}
+
+.fareLabel {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.farePrice {
+  margin-top: 5px;
+  color: #0065bd;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.searchResultAction {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 18px;
+  border: 0;
+  border-radius: 13px;
+  background: linear-gradient(90deg,#071d41,#0065bd 58%,#1672df);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .searchPageMain {
+    padding: 35px 18px 70px;
+  }
+
+  .searchPageHeaderInner {
+    padding: 18px;
+  }
+
+  .searchResultsIntro h2 {
+    font-size: 34px;
+  }
+
+  .fareChoices {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SLA premium fare selector */
+.fareChoices {
+  margin-top: 6px;
+}
+
+.fareChoices button {
+  min-height: 96px;
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #dbe5f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(7,29,65,.035);
+}
+
+.fareChoices button:hover {
+  border-color: #0065bd;
+  background: #f7fbff;
+  transform: translateY(-1px);
+}
+
+.fareChoices button.selected {
+  border: 2px solid #0065bd;
+  background: #edf6ff;
+  box-shadow: 0 5px 18px rgba(0,101,189,.10);
+}
+
+.fareLabel {
+  display: block;
+  color: #52657d;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.farePrice {
+  display: block;
+  color: #0065bd;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.searchResultAction {
+  margin-top: 20px;
+  min-height: 58px;
+  border-radius: 14px;
+}

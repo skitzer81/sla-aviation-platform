@@ -1,0 +1,928 @@
+:root {
+  --sla-navy: #071d41;
+  --sla-blue: #0065bd;
+  --sla-light-blue: #eef7ff;
+  --sla-gold: #e7ae2b;
+  --sla-line: #dce5ee;
+  --sla-muted: #6d7c8d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.slaHome {
+  background: #fff;
+  color: var(--sla-navy);
+}
+
+.slaNav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid #e8edf3;
+}
+
+.slaNavInner {
+  max-width: 1360px;
+  height: 98px;
+  margin: auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 260px 1fr auto;
+  align-items: center;
+}
+
+.slaBrand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--sla-navy);
+}
+
+.slaInfinity {
+  color: var(--sla-gold);
+  font-size: 52px;
+  line-height: .7;
+  font-family: Georgia, serif;
+}
+
+.slaBrand strong {
+  display: block;
+  font-size: 23px;
+  letter-spacing: 6px;
+}
+
+.slaBrand small {
+  display: block;
+  margin-top: 3px;
+  font-size: 8px;
+  letter-spacing: 5px;
+}
+
+.slaLinks {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.slaLinks a {
+  color: var(--sla-navy);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .5px;
+}
+
+.slaNavActions {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.slaNavActions button {
+  background: transparent;
+  border: 0;
+  color: var(--sla-navy);
+  font-weight: 750;
+}
+
+.slaBookTop {
+  padding: 13px 23px;
+  border-radius: 999px;
+  background: var(--sla-gold);
+  color: var(--sla-navy);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.hero {
+  height: 640px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(2,25,60,.76), rgba(2,25,60,.12)),
+    url("/sla-aircraft-hero.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 65%, rgba(4,25,53,.18)),
+    linear-gradient(90deg, rgba(0,101,189,.18), transparent 40%);
+}
+
+.heroContent {
+  position: relative;
+  width: 1180px;
+  margin: auto;
+  color: white;
+}
+
+.heroEyebrow {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #d7eaff;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin: 15px 0 18px;
+  font-size: 70px;
+  line-height: .98;
+  letter-spacing: -2px;
+}
+
+.hero p {
+  max-width: 620px;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.heroButton {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 15px 28px;
+  border-radius: 8px;
+  background: white;
+  color: var(--sla-navy);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.bookingStage {
+  position: relative;
+  z-index: 10;
+  max-width: 1180px;
+  margin: -72px auto 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 14px 44px rgba(7,29,65,.16);
+}
+
+.bookingTabs {
+  min-height: 67px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--sla-line);
+}
+
+.bookingTabs button {
+  border: 0;
+  border-right: 1px solid var(--sla-line);
+  background: white;
+  color: #667584;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.bookingTabs button.active {
+  color: var(--sla-navy);
+  box-shadow: inset 0 -3px var(--sla-blue);
+}
+
+.bookingInner {
+  padding: 20px;
+}
+
+.hospitalityStrip {
+  max-width: 1180px;
+  margin: 44px auto;
+  padding: 30px 34px;
+  border: 1px solid var(--sla-line);
+  display: grid;
+  grid-template-columns: 70px 1fr auto;
+  align-items: center;
+  gap: 22px;
+}
+
+.hospitalityIcon {
+  color: var(--sla-gold);
+  font-size: 54px;
+}
+
+.hospitalityStrip span {
+  color: var(--sla-blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hospitalityStrip h2 {
+  margin: 6px 0;
+  font-size: 25px;
+}
+
+.hospitalityStrip p {
+  margin: 0;
+  color: var(--sla-muted);
+}
+
+.hospitalityStrip a {
+  color: var(--sla-blue);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.quickLinks {
+  max-width: 1180px;
+  margin: 0 auto 110px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid var(--sla-line);
+}
+
+.quickLinks article {
+  min-height: 180px;
+  padding: 25px 17px;
+  text-align: center;
+  border-right: 1px solid var(--sla-line);
+}
+
+.quickLinks article:last-child {
+  border-right: 0;
+}
+
+.quickIcon {
+  color: var(--sla-blue);
+  font-size: 31px;
+}
+
+.quickLinks h3 {
+  font-size: 14px;
+}
+
+.quickLinks p {
+  min-height: 38px;
+  color: var(--sla-muted);
+  font-size: 11px;
+}
+
+.quickLinks span {
+  color: var(--sla-blue);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.destinations,
+.experience,
+.story {
+  padding: 100px 30px;
+}
+
+.destinations {
+  background: #f6f8fa;
+}
+
+.sectionHeading {
+  max-width: 1180px;
+  margin: 0 auto 40px;
+}
+
+.sectionHeading.centred {
+  text-align: center;
+}
+
+.sectionHeading span {
+  color: var(--sla-blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.sectionHeading h2 {
+  max-width: 850px;
+  margin: 9px 0;
+  font-size: 45px;
+  line-height: 1.1;
+}
+
+.sectionHeading.centred h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionHeading p {
+  color: var(--sla-muted);
+}
+
+.destinationGrid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.destinationCard {
+  height: 490px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.destinationShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 35%, rgba(2,20,48,.88));
+}
+
+.destinationContent {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  color: white;
+}
+
+.destinationContent span {
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.destinationContent h3 {
+  margin: 8px 0 3px;
+  font-size: 39px;
+}
+
+.destinationContent p {
+  color: #d8e7f5;
+}
+
+.destinationContent button {
+  padding: 12px 18px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+.viewAll {
+  display: block;
+  width: fit-content;
+  margin: 32px auto 0;
+  color: var(--sla-blue);
+  text-decoration: none;
+  font-weight: 850;
+}
+
+.experienceGrid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.experienceCard {
+  min-height: 340px;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #edf3f8;
+}
+
+.experienceCard span {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--sla-blue);
+}
+
+.experienceCard h3 {
+  margin: 10px 0;
+  font-size: 33px;
+}
+
+.experienceCard p {
+  max-width: 420px;
+  color: var(--sla-muted);
+  line-height: 1.6;
+}
+
+.experienceCard.premium {
+  background: #f5f7f9;
+}
+
+.experienceCard.caledonia {
+  background: var(--sla-navy);
+  color: white;
+  border-top: 6px solid var(--sla-gold);
+}
+
+.experienceCard.caledonia p {
+  color: #cbd7e5;
+}
+
+.experienceCard.caledonia span {
+  color: var(--sla-gold);
+}
+
+.experienceCard.food {
+  background: #f5efe6;
+}
+
+.twoWorlds {
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 380px 1fr;
+}
+
+.twoWorldsScotland,
+.twoWorldsAfrica {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.twoWorldsScotland {
+  background:
+    linear-gradient(rgba(5,30,60,.15),rgba(5,30,60,.65)),
+    url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=85") center/cover;
+}
+
+.twoWorldsAfrica {
+  justify-content: flex-end;
+  background:
+    linear-gradient(rgba(5,30,60,.08),rgba(5,30,60,.62)),
+    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85") center/cover;
+}
+
+.twoWorldsScotland span,
+.twoWorldsAfrica span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.twoWorldsCentre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  padding: 30px;
+}
+
+.worldInfinity {
+  color: var(--sla-gold);
+  font-size: 70px;
+}
+
+.twoWorldsCentre h2 {
+  font-size: 32px;
+}
+
+.storyGrid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.storyGrid article {
+  text-align: center;
+}
+
+.storyCircle {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg,var(--sla-blue),var(--sla-navy));
+  border: 6px solid #f2f5f8;
+}
+
+.storyGrid h3 {
+  margin-bottom: 7px;
+}
+
+.storyGrid p {
+  color: var(--sla-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.slaFooter {
+  padding: 65px max(30px, calc((100vw - 1180px) / 2)) 25px;
+  background: #07182d;
+  color: white;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.footerGrid h4 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footerGrid a {
+  display: block;
+  margin: 10px 0;
+  color: #9fb0c3;
+  font-size: 12px;
+}
+
+.footerNewsletter {
+  padding: 42px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.footerNewsletter h3 {
+  margin: 0 0 5px;
+}
+
+.footerNewsletter p {
+  color: #9fb0c3;
+}
+
+.newsletterForm {
+  display: flex;
+}
+
+.newsletterForm input {
+  width: 290px;
+  height: 50px;
+  padding: 0 15px;
+  border: 0;
+}
+
+.newsletterForm button {
+  width: 120px;
+  border: 0;
+  background: var(--sla-blue);
+  color: white;
+  font-weight: 900;
+}
+
+.footerBottom {
+  padding-top: 35px;
+  color: #8fa1b5;
+  font-size: 11px;
+}
+
+.footerLogo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.footerLogo span {
+  color: var(--sla-gold);
+  font-size: 38px;
+}
+
+@media(max-width:1000px) {
+  .slaNavInner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .slaLinks {
+    display: none;
+  }
+
+  .heroContent {
+    width: auto;
+    padding: 30px;
+  }
+
+  .bookingStage,
+  .hospitalityStrip,
+  .quickLinks {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .quickLinks {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .destinationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .twoWorlds {
+    grid-template-columns: 1fr;
+  }
+
+  .storyGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:650px) {
+  .slaNavActions button {
+    display: none;
+  }
+
+  .hero {
+    height: 560px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .bookingTabs {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .quickLinks {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .footerNewsletter {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .newsletterForm {
+    width: 100%;
+  }
+
+  .newsletterForm input {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SLA V3 — PREMIUM POLISH
+   ========================================================= */
+
+.slaNav {
+  background: #ffffff;
+  box-shadow: 0 3px 18px rgba(7,29,65,.055);
+}
+
+.hero {
+  min-height: 650px;
+  background:
+    linear-gradient(90deg,
+      rgba(3,29,68,.82) 0%,
+      rgba(3,47,92,.52) 36%,
+      rgba(3,47,92,.10) 67%,
+      rgba(3,47,92,.02) 100%
+    ),
+    url("/sla-aircraft-hero.jpg") center 44% / cover no-repeat;
+}
+
+/* subtle Scottish Saltire geometry */
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .08;
+  background:
+    linear-gradient(34deg,
+      transparent 46%,
+      white 46%,
+      white 48%,
+      transparent 48%
+    ),
+    linear-gradient(-34deg,
+      transparent 46%,
+      white 46%,
+      white 48%,
+      transparent 48%
+    );
+}
+
+.heroContent {
+  z-index: 2;
+}
+
+.hero h1 {
+  max-width: 760px;
+  font-size: clamp(58px, 6vw, 86px);
+  font-weight: 760;
+}
+
+.hero p {
+  max-width: 580px;
+  font-size: 20px;
+}
+
+/* booking console */
+.bookingStage {
+  border: 1px solid rgba(7,29,65,.08);
+  box-shadow: 0 22px 55px rgba(7,29,65,.18);
+}
+
+/* hospitality */
+.hospitalityStrip {
+  border-radius: 2px;
+  border-left: 5px solid var(--sla-gold);
+}
+
+/* quick actions */
+.quickLinks article {
+  position: relative;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.quickLinks article:hover {
+  background: #f7fbff;
+  transform: translateY(-2px);
+}
+
+.quickIcon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 18px;
+  border: 1px solid #c9ddf0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--sla-blue);
+}
+
+/* destinations */
+.destinationCard {
+  min-height: 520px;
+  box-shadow: 0 15px 35px rgba(7,29,65,.11);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.destinationCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(7,29,65,.17);
+}
+
+.destinationContent h3 {
+  font-size: 44px;
+}
+
+/* cabin experience */
+.experienceCard {
+  position: relative;
+  min-height: 410px;
+  overflow: hidden;
+  transition: transform .25s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+}
+
+.experienceCard:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .08;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 32px,
+      currentColor 32px 34px
+    );
+}
+
+.experienceCard > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Scotland + Africa bridge */
+.twoWorldsCentre {
+  position: relative;
+}
+
+.twoWorldsCentre:before,
+.twoWorldsCentre:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 72px;
+  background: linear-gradient(
+    transparent,
+    var(--sla-gold),
+    transparent
+  );
+}
+
+.twoWorldsCentre:before {
+  top: 30px;
+}
+
+.twoWorldsCentre:after {
+  bottom: 30px;
+}
+
+/* Replace generic circles with Scottish/African brand devices */
+.storyCircle {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 32% 27%,
+      rgba(255,255,255,.18),
+      transparent 26%
+    ),
+    linear-gradient(145deg,#0876ce,#06285a);
+}
+
+.storyGrid article:nth-child(1) .storyCircle:after {
+  content: "∞";
+}
+
+.storyGrid article:nth-child(2) .storyCircle:after {
+  content: "✕";
+}
+
+.storyGrid article:nth-child(3) .storyCircle:after {
+  content: "◇";
+}
+
+.storyGrid article:nth-child(4) .storyCircle:after {
+  content: "SLA";
+}
+
+.storyGrid article:nth-child(5) .storyCircle:after {
+  content: "○";
+}
+
+.storyCircle:after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 47px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.storyGrid article:nth-child(3) .storyCircle {
+  border-color: #f3e6bd;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #052c63 0 18px,
+      #063f82 18px 36px,
+      #dba521 36px 40px
+    );
+}
+
+/* premium footer */
+.slaFooter {
+  background:
+    linear-gradient(135deg,#06162b 0%,#071d41 65%,#052a58 100%);
+}
+
+.footerGrid h4,
+.footerNewsletter h3 {
+  color: white;
+}
+
+.footerGrid a:hover {
+  color: white;
+}
+
+@media(max-width: 750px) {
+  .hero {
+    min-height: 590px;
+    background-position: 65% center;
+  }
+}

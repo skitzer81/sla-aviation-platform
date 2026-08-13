@@ -210,3 +210,256 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+/* =========================================================
+   SLA AIRLINES — SEARCH RESULTS
+   ========================================================= */
+
+.searchPage {
+  min-height: 100vh;
+  background: #f7f9fc;
+  color: #071d41;
+}
+
+.searchPageHeader {
+  background: #ffffff;
+  border-bottom: 1px solid #e4eaf2;
+}
+
+.searchPageHeaderInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 22px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchPageHeader h1 {
+  margin: 0;
+  color: #071d41;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.searchPageHeader p {
+  margin: 4px 0 0;
+  color: #708198;
+  font-size: 13px;
+}
+
+.searchPageHeader a {
+  text-decoration: none;
+  border: 1px solid #cbd6e4;
+  border-radius: 999px;
+  padding: 11px 18px;
+  color: #071d41;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.searchPageMain {
+  padding: 52px 40px 90px;
+}
+
+.searchResultsContainer {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.searchResultsSection {
+  width: 100%;
+}
+
+.searchResultsIntro .eyebrow {
+  color: #0065bd;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.searchResultsIntro h2 {
+  margin: 10px 0 10px;
+  font-size: 46px;
+  line-height: 1.05;
+  color: #071d41;
+  font-weight: 800;
+}
+
+.searchResultsIntro > p {
+  color: #64768e;
+  font-size: 17px;
+}
+
+.searchResultsMeta {
+  margin: 26px 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.searchResultsMeta span {
+  background: #ffffff;
+  border: 1px solid #dce4ee;
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: #52657d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.searchResultsList {
+  display: grid;
+  gap: 18px;
+}
+
+.searchResultCard {
+  background: #ffffff;
+  border: 1px solid #dfe7f1;
+  border-radius: 22px;
+  padding: 25px 28px;
+  box-shadow: 0 12px 35px rgba(12, 42, 77, 0.07);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.searchResultCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 42px rgba(12, 42, 77, 0.11);
+}
+
+.searchResultCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.searchResultCardTop h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #071d41;
+}
+
+.searchResultBadge {
+  background: #edf6ff;
+  color: #0065bd;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.searchResultRoute {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.searchResultRoute strong {
+  font-size: 30px;
+  color: #071d41;
+}
+
+.searchResultRoute span {
+  color: #d5a62e;
+  font-size: 22px;
+}
+
+.searchResultDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 18px 0;
+  color: #63758c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.searchResultFares {
+  border-top: 1px solid #edf1f6;
+  padding-top: 20px;
+}
+
+.fareChoices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.fareChoices button {
+  min-height: 78px;
+  border: 1px solid #d9e3ee;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #071d41;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 13px 16px;
+  transition: .2s ease;
+}
+
+.fareChoices button:hover {
+  border-color: #0065bd;
+  background: #f4f9ff;
+}
+
+.fareChoices button.selected {
+  border: 2px solid #0065bd;
+  background: #edf6ff;
+}
+
+.fareLabel {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.farePrice {
+  margin-top: 5px;
+  font-size: 19px;
+  font-weight: 900;
+  color: #0065bd;
+}
+
+.searchResultAction {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 18px;
+  border: 0;
+  border-radius: 13px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 850;
+  font-size: 14px;
+  background: linear-gradient(90deg, #071d41 0%, #0065bd 58%, #1672df 100%);
+}
+
+.searchResultAction:hover {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 760px) {
+  .searchPageMain {
+    padding: 35px 18px 70px;
+  }
+
+  .searchPageHeaderInner {
+    padding: 18px;
+  }
+
+  .searchResultsIntro h2 {
+    font-size: 34px;
+  }
+
+  .fareChoices {
+    grid-template-columns: 1fr;
+  }
+
+  .searchResultCard {
+    padding: 20px;
+  }
+}
+

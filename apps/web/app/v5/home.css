@@ -1,0 +1,1526 @@
+:root {
+  --sla-navy: #071d41;
+  --sla-blue: #0065bd;
+  --sla-light-blue: #eef7ff;
+  --sla-gold: #e7ae2b;
+  --sla-line: #dce5ee;
+  --sla-muted: #6d7c8d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.slaHome {
+  background: #fff;
+  color: var(--sla-navy);
+}
+
+.slaNav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid #e8edf3;
+}
+
+.slaNavInner {
+  max-width: 1360px;
+  height: 98px;
+  margin: auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 260px 1fr auto;
+  align-items: center;
+}
+
+.slaBrand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--sla-navy);
+}
+
+.slaInfinity {
+  color: var(--sla-gold);
+  font-size: 52px;
+  line-height: .7;
+  font-family: Georgia, serif;
+}
+
+.slaBrand strong {
+  display: block;
+  font-size: 23px;
+  letter-spacing: 6px;
+}
+
+.slaBrand small {
+  display: block;
+  margin-top: 3px;
+  font-size: 8px;
+  letter-spacing: 5px;
+}
+
+.slaLinks {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.slaLinks a {
+  color: var(--sla-navy);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .5px;
+}
+
+.slaNavActions {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.slaNavActions button {
+  background: transparent;
+  border: 0;
+  color: var(--sla-navy);
+  font-weight: 750;
+}
+
+.slaBookTop {
+  padding: 13px 23px;
+  border-radius: 999px;
+  background: var(--sla-gold);
+  color: var(--sla-navy);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.hero {
+  height: 640px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(2,25,60,.76), rgba(2,25,60,.12)),
+    url("/hero/sla-hero-approved.png") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 65%, rgba(4,25,53,.18)),
+    linear-gradient(90deg, rgba(0,101,189,.18), transparent 40%);
+}
+
+.heroContent {
+  position: relative;
+  width: 1180px;
+  margin: auto;
+  color: white;
+}
+
+.heroEyebrow {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #d7eaff;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin: 15px 0 18px;
+  font-size: 70px;
+  line-height: .98;
+  letter-spacing: -2px;
+}
+
+.hero p {
+  max-width: 620px;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.heroButton {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 15px 28px;
+  border-radius: 8px;
+  background: white;
+  color: var(--sla-navy);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.bookingStage {
+  position: relative;
+  z-index: 10;
+  max-width: 1180px;
+  margin: -72px auto 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 14px 44px rgba(7,29,65,.16);
+}
+
+.bookingTabs {
+  min-height: 67px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--sla-line);
+}
+
+.bookingTabs button {
+  border: 0;
+  border-right: 1px solid var(--sla-line);
+  background: white;
+  color: #667584;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.bookingTabs button.active {
+  color: var(--sla-navy);
+  box-shadow: inset 0 -3px var(--sla-blue);
+}
+
+.bookingInner {
+  padding: 20px;
+}
+
+.hospitalityStrip {
+  max-width: 1180px;
+  margin: 44px auto;
+  padding: 30px 34px;
+  border: 1px solid var(--sla-line);
+  display: grid;
+  grid-template-columns: 70px 1fr auto;
+  align-items: center;
+  gap: 22px;
+}
+
+.hospitalityIcon {
+  color: var(--sla-gold);
+  font-size: 54px;
+}
+
+.hospitalityStrip span {
+  color: var(--sla-blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hospitalityStrip h2 {
+  margin: 6px 0;
+  font-size: 25px;
+}
+
+.hospitalityStrip p {
+  margin: 0;
+  color: var(--sla-muted);
+}
+
+.hospitalityStrip a {
+  color: var(--sla-blue);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.quickLinks {
+  max-width: 1180px;
+  margin: 0 auto 110px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid var(--sla-line);
+}
+
+.quickLinks article {
+  min-height: 180px;
+  padding: 25px 17px;
+  text-align: center;
+  border-right: 1px solid var(--sla-line);
+}
+
+.quickLinks article:last-child {
+  border-right: 0;
+}
+
+.quickIcon {
+  color: var(--sla-blue);
+  font-size: 31px;
+}
+
+.quickLinks h3 {
+  font-size: 14px;
+}
+
+.quickLinks p {
+  min-height: 38px;
+  color: var(--sla-muted);
+  font-size: 11px;
+}
+
+.quickLinks span {
+  color: var(--sla-blue);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.destinations,
+.experience,
+.story {
+  padding: 100px 30px;
+}
+
+.destinations {
+  background: #f6f8fa;
+}
+
+.sectionHeading {
+  max-width: 1180px;
+  margin: 0 auto 40px;
+}
+
+.sectionHeading.centred {
+  text-align: center;
+}
+
+.sectionHeading span {
+  color: var(--sla-blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.sectionHeading h2 {
+  max-width: 850px;
+  margin: 9px 0;
+  font-size: 45px;
+  line-height: 1.1;
+}
+
+.sectionHeading.centred h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionHeading p {
+  color: var(--sla-muted);
+}
+
+.destinationGrid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.destinationCard {
+  height: 490px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.destinationShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 35%, rgba(2,20,48,.88));
+}
+
+.destinationContent {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  color: white;
+}
+
+.destinationContent span {
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.destinationContent h3 {
+  margin: 8px 0 3px;
+  font-size: 39px;
+}
+
+.destinationContent p {
+  color: #d8e7f5;
+}
+
+.destinationContent button {
+  padding: 12px 18px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+.viewAll {
+  display: block;
+  width: fit-content;
+  margin: 32px auto 0;
+  color: var(--sla-blue);
+  text-decoration: none;
+  font-weight: 850;
+}
+
+.experienceGrid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.experienceCard {
+  min-height: 340px;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #edf3f8;
+}
+
+.experienceCard span {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--sla-blue);
+}
+
+.experienceCard h3 {
+  margin: 10px 0;
+  font-size: 33px;
+}
+
+.experienceCard p {
+  max-width: 420px;
+  color: var(--sla-muted);
+  line-height: 1.6;
+}
+
+.experienceCard.premium {
+  background: #f5f7f9;
+}
+
+.experienceCard.caledonia {
+  background: var(--sla-navy);
+  color: white;
+  border-top: 6px solid var(--sla-gold);
+}
+
+.experienceCard.caledonia p {
+  color: #cbd7e5;
+}
+
+.experienceCard.caledonia span {
+  color: var(--sla-gold);
+}
+
+.experienceCard.food {
+  background: #f5efe6;
+}
+
+.twoWorlds {
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 380px 1fr;
+}
+
+.twoWorldsScotland,
+.twoWorldsAfrica {
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.twoWorldsScotland {
+  background:
+    linear-gradient(rgba(5,30,60,.15),rgba(5,30,60,.65)),
+    url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1200&q=85") center/cover;
+}
+
+.twoWorldsAfrica {
+  justify-content: flex-end;
+  background:
+    linear-gradient(rgba(5,30,60,.08),rgba(5,30,60,.62)),
+    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85") center/cover;
+}
+
+.twoWorldsScotland span,
+.twoWorldsAfrica span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.twoWorldsCentre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  padding: 30px;
+}
+
+.worldInfinity {
+  color: var(--sla-gold);
+  font-size: 70px;
+}
+
+.twoWorldsCentre h2 {
+  font-size: 32px;
+}
+
+.storyGrid {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.storyGrid article {
+  text-align: center;
+}
+
+.storyCircle {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg,var(--sla-blue),var(--sla-navy));
+  border: 6px solid #f2f5f8;
+}
+
+.storyGrid h3 {
+  margin-bottom: 7px;
+}
+
+.storyGrid p {
+  color: var(--sla-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.slaFooter {
+  padding: 65px max(30px, calc((100vw - 1180px) / 2)) 25px;
+  background: #07182d;
+  color: white;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.footerGrid h4 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footerGrid a {
+  display: block;
+  margin: 10px 0;
+  color: #9fb0c3;
+  font-size: 12px;
+}
+
+.footerNewsletter {
+  padding: 42px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.footerNewsletter h3 {
+  margin: 0 0 5px;
+}
+
+.footerNewsletter p {
+  color: #9fb0c3;
+}
+
+.newsletterForm {
+  display: flex;
+}
+
+.newsletterForm input {
+  width: 290px;
+  height: 50px;
+  padding: 0 15px;
+  border: 0;
+}
+
+.newsletterForm button {
+  width: 120px;
+  border: 0;
+  background: var(--sla-blue);
+  color: white;
+  font-weight: 900;
+}
+
+.footerBottom {
+  padding-top: 35px;
+  color: #8fa1b5;
+  font-size: 11px;
+}
+
+.footerLogo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.footerLogo span {
+  color: var(--sla-gold);
+  font-size: 38px;
+}
+
+@media(max-width:1000px) {
+  .slaNavInner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .slaLinks {
+    display: none;
+  }
+
+  .heroContent {
+    width: auto;
+    padding: 30px;
+  }
+
+  .bookingStage,
+  .hospitalityStrip,
+  .quickLinks {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .quickLinks {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .destinationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .twoWorlds {
+    grid-template-columns: 1fr;
+  }
+
+  .storyGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:650px) {
+  .slaNavActions button {
+    display: none;
+  }
+
+  .hero {
+    height: 560px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .bookingTabs {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .quickLinks {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerGrid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .footerNewsletter {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .newsletterForm {
+    width: 100%;
+  }
+
+  .newsletterForm input {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SLA V3 — PREMIUM POLISH
+   ========================================================= */
+
+.slaNav {
+  background: #ffffff;
+  box-shadow: 0 3px 18px rgba(7,29,65,.055);
+}
+
+.hero {
+  min-height: 650px;
+  background:
+    linear-gradient(90deg,
+      rgba(3,29,68,.82) 0%,
+      rgba(3,47,92,.52) 36%,
+      rgba(3,47,92,.10) 67%,
+      rgba(3,47,92,.02) 100%
+    ),
+    url("/hero/sla-hero-approved.png") center 44% / cover no-repeat;
+}
+
+/* subtle Scottish Saltire geometry */
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .08;
+  background:
+    linear-gradient(34deg,
+      transparent 46%,
+      white 46%,
+      white 48%,
+      transparent 48%
+    ),
+    linear-gradient(-34deg,
+      transparent 46%,
+      white 46%,
+      white 48%,
+      transparent 48%
+    );
+}
+
+.heroContent {
+  z-index: 2;
+}
+
+.hero h1 {
+  max-width: 760px;
+  font-size: clamp(58px, 6vw, 86px);
+  font-weight: 760;
+}
+
+.hero p {
+  max-width: 580px;
+  font-size: 20px;
+}
+
+/* booking console */
+.bookingStage {
+  border: 1px solid rgba(7,29,65,.08);
+  box-shadow: 0 22px 55px rgba(7,29,65,.18);
+}
+
+/* hospitality */
+.hospitalityStrip {
+  border-radius: 2px;
+  border-left: 5px solid var(--sla-gold);
+}
+
+/* quick actions */
+.quickLinks article {
+  position: relative;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.quickLinks article:hover {
+  background: #f7fbff;
+  transform: translateY(-2px);
+}
+
+.quickIcon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 18px;
+  border: 1px solid #c9ddf0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--sla-blue);
+}
+
+/* destinations */
+.destinationCard {
+  min-height: 520px;
+  box-shadow: 0 15px 35px rgba(7,29,65,.11);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.destinationCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(7,29,65,.17);
+}
+
+.destinationContent h3 {
+  font-size: 44px;
+}
+
+/* cabin experience */
+.experienceCard {
+  position: relative;
+  min-height: 410px;
+  overflow: hidden;
+  transition: transform .25s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+}
+
+.experienceCard:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .08;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 32px,
+      currentColor 32px 34px
+    );
+}
+
+.experienceCard > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Scotland + Africa bridge */
+.twoWorldsCentre {
+  position: relative;
+}
+
+.twoWorldsCentre:before,
+.twoWorldsCentre:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 72px;
+  background: linear-gradient(
+    transparent,
+    var(--sla-gold),
+    transparent
+  );
+}
+
+.twoWorldsCentre:before {
+  top: 30px;
+}
+
+.twoWorldsCentre:after {
+  bottom: 30px;
+}
+
+/* Replace generic circles with Scottish/African brand devices */
+.storyCircle {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 32% 27%,
+      rgba(255,255,255,.18),
+      transparent 26%
+    ),
+    linear-gradient(145deg,#0876ce,#06285a);
+}
+
+.storyGrid article:nth-child(1) .storyCircle:after {
+  content: "∞";
+}
+
+.storyGrid article:nth-child(2) .storyCircle:after {
+  content: "✕";
+}
+
+.storyGrid article:nth-child(3) .storyCircle:after {
+  content: "◇";
+}
+
+.storyGrid article:nth-child(4) .storyCircle:after {
+  content: "SLA";
+}
+
+.storyGrid article:nth-child(5) .storyCircle:after {
+  content: "○";
+}
+
+.storyCircle:after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 47px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.storyGrid article:nth-child(3) .storyCircle {
+  border-color: #f3e6bd;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #052c63 0 18px,
+      #063f82 18px 36px,
+      #dba521 36px 40px
+    );
+}
+
+/* premium footer */
+.slaFooter {
+  background:
+    linear-gradient(135deg,#06162b 0%,#071d41 65%,#052a58 100%);
+}
+
+.footerGrid h4,
+.footerNewsletter h3 {
+  color: white;
+}
+
+.footerGrid a:hover {
+  color: white;
+}
+
+@media(max-width: 750px) {
+  .hero {
+    min-height: 590px;
+    background-position: 65% center;
+  }
+}
+
+/* =========================================================
+   SLA V4 — INTERNATIONAL FLAGSHIP
+   Emirates-level hierarchy, SLA-owned identity
+   ========================================================= */
+
+.slaHome {
+  background:#f7f7f7;
+}
+
+/* premium information bar */
+.slaHome:before {
+  content:"SLA Travel Update  •  New Scotland–Africa routes under development";
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:8px 20px;
+  background:#eef6ff;
+  border-bottom:1px solid #dbe7f2;
+  color:#31516f;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
+}
+
+/* stronger airline navigation */
+.slaNav {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#071d41;
+  border:0;
+  box-shadow:0 4px 18px rgba(0,0,0,.12);
+}
+
+.slaNavInner {
+  height:88px;
+}
+
+.slaBrand {
+  color:white;
+}
+
+.slaBrand strong,
+.slaBrand small {
+  color:white;
+}
+
+.slaLinks a {
+  color:white;
+}
+
+.slaLinks a:hover {
+  color:#f1bd3b;
+}
+
+.slaNavActions button {
+  color:white;
+}
+
+.slaBookTop {
+  background:#e8ae27;
+  color:#071d41;
+}
+
+/* cinematic flagship hero */
+.hero {
+  height:690px;
+  min-height:690px;
+}
+
+.hero:after {
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:170px;
+  background:linear-gradient(transparent,rgba(7,29,65,.33));
+}
+
+.heroContent {
+  padding-bottom:70px;
+}
+
+.heroEyebrow {
+  color:#f4cc64;
+}
+
+.hero h1 {
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:500;
+  font-size:clamp(62px,6.2vw,92px);
+  letter-spacing:-2px;
+}
+
+.hero p {
+  font-size:20px;
+  max-width:650px;
+}
+
+.heroButton {
+  background:#e6ad29;
+  color:#071d41;
+  border-radius:2px;
+  min-width:155px;
+  text-align:center;
+}
+
+/* Booking becomes the dominant product interface */
+.bookingStage {
+  margin-top:-96px;
+  border-radius:2px;
+  max-width:1180px;
+  box-shadow:0 14px 34px rgba(7,29,65,.22);
+}
+
+.bookingTabs {
+  min-height:72px;
+}
+
+.bookingTabs button {
+  font-size:14px;
+  background:#fff;
+}
+
+.bookingTabs button.active {
+  box-shadow:inset 0 -4px #0065bd;
+}
+
+.bookingInner {
+  padding:22px 22px 26px;
+}
+
+/* SLA editorial promo */
+.hospitalityStrip {
+  margin-top:42px;
+  min-height:165px;
+  background:
+    linear-gradient(90deg,#fff 0%,#fff 67%,#f4f8fb 67%);
+  border-left:0;
+  border-top:1px solid #dce5ee;
+  border-bottom:1px solid #dce5ee;
+  border-radius:0;
+}
+
+.hospitalityStrip:before {
+  content:"SLA";
+  display:grid;
+  place-items:center;
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#071d41;
+  color:#fff;
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.hospitalityIcon {
+  display:none;
+}
+
+/* airport/service shortcut row */
+.quickLinks {
+  background:white;
+  margin-bottom:85px;
+}
+
+.quickLinks article {
+  min-height:155px;
+}
+
+.quickLinks h3 {
+  font-size:15px;
+}
+
+/* stronger content section headers */
+.sectionHeading h2 {
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:500;
+  font-size:50px;
+}
+
+.sectionHeading p {
+  font-size:15px;
+}
+
+/* destination cards closer to full airline merchandising */
+.destinations {
+  padding-top:85px;
+}
+
+.destinationGrid {
+  gap:24px;
+}
+
+.destinationCard {
+  min-height:520px;
+}
+
+.destinationContent {
+  bottom:34px;
+}
+
+.destinationContent span {
+  color:#f2d27b;
+}
+
+.destinationContent h3 {
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:48px;
+  font-weight:500;
+}
+
+.destinationContent button {
+  background:white;
+  color:#071d41;
+  border:0;
+  min-height:44px;
+  padding:0 18px;
+  font-weight:800;
+}
+
+/* airline experience mosaic */
+.experience {
+  background:white;
+}
+
+.experienceGrid {
+  grid-template-columns:1.35fr .85fr;
+  grid-template-rows:repeat(2,1fr);
+  min-height:850px;
+}
+
+.experienceCard {
+  min-height:400px;
+  padding:48px;
+}
+
+.experienceCard.economy {
+  grid-row:1 / 3;
+  justify-content:flex-end;
+  background:
+    linear-gradient(180deg,rgba(7,29,65,.08),rgba(7,29,65,.78)),
+    url("https://images.unsplash.com/photo-1540339832862-474599807836?auto=format&fit=crop&w=1400&q=85")
+    center/cover;
+  color:white;
+}
+
+.experienceCard.economy p {
+  color:#e3edf6;
+}
+
+.experienceCard.premium {
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.25),rgba(7,29,65,.80)),
+    url("https://images.unsplash.com/photo-1583202075376-837d5ff1bf0f?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+  color:white;
+}
+
+.experienceCard.premium p {
+  color:#e3edf6;
+}
+
+.experienceCard.food {
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.10),rgba(7,29,65,.78)),
+    url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=85")
+    center/cover;
+  color:white;
+}
+
+.experienceCard.food p {
+  color:#e3edf6;
+}
+
+.experienceCard.caledonia {
+  background:
+    linear-gradient(135deg,#071d41,#0a336b);
+}
+
+/* stronger culture bridge */
+.twoWorlds {
+  min-height:590px;
+}
+
+.twoWorldsCentre {
+  background:#fff;
+}
+
+.twoWorldsCentre h2 {
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:37px;
+}
+
+/* premium about section */
+.story {
+  background:#fff;
+}
+
+.storyGrid article {
+  padding:15px;
+}
+
+.storyCircle {
+  width:175px;
+  height:175px;
+  box-shadow:0 9px 25px rgba(7,29,65,.12);
+}
+
+/* deep global airline footer */
+.slaFooter {
+  padding-top:78px;
+  background:#06162c;
+}
+
+.footerGrid {
+  grid-template-columns:repeat(5,1fr);
+  gap:55px;
+}
+
+.footerGrid h4 {
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:18px;
+}
+
+.footerGrid a {
+  font-size:13px;
+  line-height:1.4;
+}
+
+.footerNewsletter {
+  padding:48px 0;
+}
+
+.footerNewsletter h3 {
+  font-size:26px;
+}
+
+.newsletterForm input {
+  height:54px;
+}
+
+.newsletterForm button {
+  height:54px;
+  background:#0065bd;
+}
+
+@media(max-width:900px) {
+  .experienceGrid {
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+  }
+
+  .experienceCard.economy {
+    grid-row:auto;
+  }
+}
+
+/* =========================================================
+   SLA V5 — QUIET INTERNATIONAL LUXURY
+   ========================================================= */
+
+/* remove the artificial marketing announcement */
+.slaHome:before {
+  display: none;
+}
+
+/* navigation like a mature global carrier */
+.slaNav {
+  background: #ffffff;
+  color: #071d41;
+  box-shadow: none;
+  border-bottom: 1px solid #e5e8ec;
+}
+
+.slaBrand,
+.slaBrand strong,
+.slaBrand small,
+.slaLinks a,
+.slaNavActions button {
+  color: #071d41;
+}
+
+.slaLinks a:hover {
+  color: #0065bd;
+}
+
+/* hero becomes image-first */
+.hero {
+  height: 650px;
+  min-height: 650px;
+}
+
+.hero:before {
+  opacity: 0;
+}
+
+.heroContent {
+  padding-bottom: 85px;
+}
+
+.heroEyebrow {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.hero h1 {
+  margin-top: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(66px, 6vw, 96px);
+  font-weight: 400;
+  letter-spacing: -3px;
+}
+
+.hero p {
+  display: none;
+}
+
+.heroButton {
+  border-radius: 1px;
+  padding: 16px 34px;
+  background: #ffffff;
+  color: #071d41;
+}
+
+/* booking module takes centre stage */
+.bookingStage {
+  margin-top: -82px;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.16);
+}
+
+.bookingTabs button {
+  min-height: 70px;
+  font-size: 14px;
+}
+
+.bookingTabs button.active {
+  color: #071d41;
+  box-shadow: inset 0 -4px #0065bd;
+}
+
+/* less promotional, cleaner */
+.hospitalityStrip {
+  min-height: 140px;
+  margin-top: 45px;
+  background: #ffffff;
+}
+
+.hospitalityStrip h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 29px;
+}
+
+/* services like a serious airline */
+.quickLinks {
+  margin-top: 35px;
+  background: white;
+}
+
+.quickLinks article {
+  min-height: 150px;
+}
+
+.quickLinks p {
+  color: #7b8590;
+}
+
+/* destination merchandising */
+.destinations {
+  background: #f5f5f5;
+}
+
+.sectionHeading span {
+  color: #6c7580;
+  letter-spacing: 4px;
+}
+
+.sectionHeading h2 {
+  color: #202832;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.destinationCard {
+  border-radius: 0;
+}
+
+/* luxury cabin gallery */
+.experience {
+  background: #ffffff;
+}
+
+.experienceCard {
+  border-radius: 0;
+}
+
+.experienceCard h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+/* corporate story rather than identity marketing */
+.story {
+  padding-top: 95px;
+  padding-bottom: 115px;
+  background: #fafafa;
+}
+
+.storyCircle {
+  background: #ffffff;
+  border: 1px solid #dfe4ea;
+  box-shadow: none;
+}
+
+.storyCircle:after {
+  color: #0065bd;
+  font-family: Georgia, serif;
+}
+
+/* remove symbolic Africa pattern */
+.storyGrid article:nth-child(3) .storyCircle {
+  border-color: #dfe4ea;
+  background: #ffffff;
+}
+
+/* quiet footer */
+.slaFooter {
+  background: #252525;
+}
+
+.footerGrid a {
+  color: #b6b6b6;
+}
+
+.footerBottom {
+  color: #a7a7a7;
+}
+
+@media(max-width:650px) {
+  .hero h1 {
+    font-size: 58px;
+  }
+}
+
+/* SLA flagship aircraft hero */
+.hero {
+  height: 690px;
+  min-height: 690px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,27,61,.66) 0%,
+      rgba(3,35,72,.32) 32%,
+      rgba(3,35,72,.06) 62%,
+      transparent 82%
+    ),
+    url("/hero/sla-hero-approved.png") center 48% / cover no-repeat !important;
+}
+
+/* V5 flagship hero refinement */
+
+.heroContent {
+  padding-bottom: 120px;
+}
+
+.heroEyebrow {
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.hero h1 {
+  max-width: 520px;
+  margin-top: 12px;
+  font-size: clamp(58px,5.3vw,82px);
+  line-height: .98;
+}
+
+.heroButton {
+  margin-top: 28px;
+  min-width: 165px;
+  padding: 17px 30px;
+  background: #fff;
+  border: 0;
+  color: #071d41;
+  font-weight: 800;
+}
+
+.bookingStage {
+  margin-top: -88px;
+}
+

@@ -1,0 +1,160 @@
+.header {
+  position: relative;
+  z-index: 100;
+  min-height: 88px;
+  padding: 0 36px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 36px;
+  background: #041e42;
+  color: #ffffff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logoMark {
+  width: 48px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50% 50% 46% 46%;
+  background: linear-gradient(135deg, #f0d58f, #ffffff 48%, #d9b35f);
+  color: #041e42;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.wordmark {
+  display: grid;
+  gap: 4px;
+  line-height: 1;
+}
+
+.wordmark strong {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.wordmark small {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav a {
+  position: relative;
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 17px;
+  height: 2px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language,
+.signIn {
+  min-height: 42px;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.signIn {
+  min-width: 98px;
+  padding: 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 999px;
+}
+
+.book {
+  min-width: 96px;
+  min-height: 44px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f0d58f, #d9b35f);
+  color: #041e42;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    min-height: 74px;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .language,
+  .divider,
+  .signIn,
+  .wordmark small {
+    display: none;
+  }
+
+  .wordmark strong {
+    font-size: 21px;
+  }
+
+  .book {
+    min-width: 82px;
+    min-height: 40px;
+    padding: 0 18px;
+  }
+}

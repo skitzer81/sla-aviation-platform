@@ -1,3 +1,4 @@
+import "./search.css";
 import Link from "next/link";
 
 import SearchResults from "@/components/search/SearchResults";

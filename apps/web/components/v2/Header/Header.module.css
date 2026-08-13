@@ -1,0 +1,234 @@
+.header {
+  width: 100%;
+  height: 92px;
+  padding: 0 clamp(28px, 4.5vw, 72px);
+
+  display: grid;
+  grid-template-columns: 190px 1fr 270px;
+  align-items: center;
+  gap: 28px;
+
+  background: #ffffff;
+  border-bottom: 1px solid rgba(7, 31, 69, 0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.symbol {
+  display: block;
+  width: 126px;
+  height: 58px;
+  object-fit: contain;
+
+  /*
+   * The source artwork contains empty space.
+   * Scaling it slightly larger gives the symbol
+   * the visual authority it needs.
+   */
+  transform: scale(1.18);
+  transform-origin: left center;
+}
+
+.nav {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 3vw, 48px);
+}
+
+.nav a {
+  position: relative;
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  color: #071f45;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+
+  text-decoration: none;
+
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.nav a:hover {
+  color: #b78324;
+}
+
+.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 17px;
+
+  height: 2px;
+
+  border-radius: 100px;
+  background: #d5a33f;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.language {
+  height: 44px;
+  padding: 0 14px;
+
+  border: 0;
+  background: transparent;
+
+  color: #071f45;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.signIn {
+  height: 44px;
+  min-width: 96px;
+  padding: 0 22px;
+
+  border: 1px solid rgba(7, 31, 69, 0.38);
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #071f45;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.signIn:hover {
+  background: #f6f8fb;
+  border-color: #071f45;
+}
+
+.book {
+  height: 46px;
+  min-width: 100px;
+  padding: 0 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5d57e 0%,
+      #e9b84f 55%,
+      #dca437 100%
+    );
+
+  box-shadow:
+    0 8px 24px rgba(201, 146, 39, 0.18);
+
+  color: #071f45;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.book:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 11px 28px rgba(201, 146, 39, 0.25);
+}
+
+@media (max-width: 1050px) {
+  .header {
+    grid-template-columns: 160px 1fr auto;
+  }
+
+  .nav {
+    gap: 24px;
+  }
+
+  .symbol {
+    width: 108px;
+  }
+}
+
+@media (max-width: 850px) {
+  .header {
+    height: 78px;
+    grid-template-columns: 1fr auto;
+    padding: 0 22px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .symbol {
+    width: 105px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .symbol {
+    width: 94px;
+  }
+
+  .language,
+  .signIn {
+    display: none;
+  }
+
+  .book {
+    height: 42px;
+    min-width: 82px;
+    padding: 0 20px;
+  }
+}

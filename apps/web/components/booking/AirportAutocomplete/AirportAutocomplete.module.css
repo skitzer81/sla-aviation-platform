@@ -1,0 +1,122 @@
+.wrapper {
+  position: relative;
+  min-width: 0;
+}
+
+.label {
+  display: block;
+  margin-bottom: 7px;
+  color: #68778d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  height: 54px;
+  padding: 0 14px;
+  border: 1px solid #dce3ec;
+  border-radius: 12px;
+  outline: none;
+  background: #ffffff;
+  color: #10213b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.input:focus {
+  border-color: #0f5bd7;
+  box-shadow: 0 0 0 3px rgba(15, 91, 215, 0.1);
+}
+
+.menu {
+  position: absolute;
+  z-index: 100;
+  top: calc(100% + 8px);
+  left: 0;
+  width: min(420px, 90vw);
+  overflow: hidden;
+  border: 1px solid #e1e7ef;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(4, 30, 66, 0.16);
+}
+
+.option {
+  width: 100%;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border: 0;
+  border-bottom: 1px solid #eef2f7;
+  background: #ffffff;
+  color: #10213b;
+  text-align: left;
+  cursor: pointer;
+}
+
+.option:last-child {
+  border-bottom: 0;
+}
+
+.option:hover,
+.option:focus-visible {
+  background: #f6f9fd;
+  outline: none;
+}
+
+.optionMain {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.optionMain strong {
+  font-size: 14px;
+}
+
+.optionMain span {
+  overflow: hidden;
+  color: #53647c;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.optionMain small {
+  color: #8390a3;
+  font-size: 11px;
+}
+
+.code {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #eaf2ff;
+  color: #0f5bd7;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.inputShell {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  color: #8a98aa;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.inputShell .input {
+  padding-left: 42px;
+}

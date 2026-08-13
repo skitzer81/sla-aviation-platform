@@ -1,0 +1,257 @@
+.card {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid rgba(7, 31, 69, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 18px 55px rgba(7, 31, 69, 0.12);
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tabs button {
+  min-height: 38px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #6c7a8f;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #071f45;
+  color: #ffffff;
+}
+
+.routeRow {
+  display: grid;
+  grid-template-columns:
+    minmax(170px, 1.25fr)
+    46px
+    minmax(170px, 1.25fr)
+    minmax(145px, 0.95fr)
+    minmax(145px, 0.95fr)
+    minmax(140px, 0.9fr)
+    minmax(150px, 0.95fr);
+  gap: 10px;
+  align-items: end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field > span {
+  color: #728096;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-width: 0;
+  height: 58px;
+  padding: 0 14px;
+  border: 1px solid #dce3ec;
+  border-radius: 13px;
+  outline: none;
+  background: #ffffff;
+  color: #10213b;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.controlShell {
+  position: relative;
+}
+
+.controlShell input,
+.controlShell select {
+  padding-left: 42px;
+}
+
+.controlIcon {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  color: #8a98aa;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.swap {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 8px;
+  display: grid;
+  place-items: center;
+  align-self: end;
+  justify-self: center;
+  border: 1px solid #d6dfe9;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0f5bd7;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(7, 31, 69, 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.swap:hover {
+  transform: rotate(180deg);
+  box-shadow: 0 9px 22px rgba(7, 31, 69, 0.13);
+}
+
+.search {
+  width: 100%;
+  height: 58px;
+  margin-top: 17px;
+  padding: 0 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 13px;
+  background: linear-gradient(
+    90deg,
+    #071f45 0%,
+    #0b3a79 55%,
+    #0f5bd7 100%
+  );
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(15, 91, 215, 0.18);
+}
+
+.search:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1150px) {
+  .routeRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .swap {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .tabs {
+    overflow-x: auto;
+  }
+
+  .tabs button {
+    flex: 0 0 auto;
+  }
+
+  .routeRow {
+    grid-template-columns: 1fr;
+  }
+
+  .search {
+    height: 56px;
+  }
+}
+
+/* Passenger select spacing */
+.controlShell select {
+  padding-left: 42px;
+  padding-right: 34px;
+  appearance: auto;
+}
+
+.controlShell {
+  width: 100%;
+}
+
+.controlShell select,
+.controlShell input {
+  box-sizing: border-box;
+}
+
+/* Passenger select spacing */
+.controlShell select {
+  padding-left: 42px;
+  padding-right: 34px;
+  appearance: auto;
+}
+
+.controlShell {
+  width: 100%;
+}
+
+.controlShell select,
+.controlShell input {
+  box-sizing: border-box;
+}
+
+.passengerSelect {
+  width: 100%;
+  height: 58px;
+  padding: 0 34px 0 42px;
+  border: 1px solid #dce3ec;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #10213b;
+  font-size: 14px;
+  font-weight: 650;
+  box-sizing: border-box;
+}
+
+.passengerSelect:focus {
+  outline: none;
+  border-color: #0f5bd7;
+  box-shadow: 0 0 0 3px rgba(15, 91, 215, 0.1);
+}
+
+/* Final passenger control */
+.passengerSelect {
+  padding-left: 14px !important;
+  padding-right: 34px !important;
+}
+
+/* SLA date fields — navy, not browser blue */
+.field input[type="date"] {
+  color: #10213b !important;
+  -webkit-text-fill-color: #10213b !important;
+  opacity: 1;
+}
+
+.field input[type="date"]::-webkit-datetime-edit,
+.field input[type="date"]::-webkit-datetime-edit-text,
+.field input[type="date"]::-webkit-datetime-edit-month-field,
+.field input[type="date"]::-webkit-datetime-edit-day-field,
+.field input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #10213b !important;
+  -webkit-text-fill-color: #10213b !important;
+}
