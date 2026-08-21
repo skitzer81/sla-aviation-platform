@@ -1,0 +1,261 @@
+:root {
+  --navy:#061b3d;
+  --blue:#0065bd;
+  --gold:#dca51c;
+  --line:#dfe5eb;
+  --muted:#687789;
+  --soft:#f6f7f8;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+}
+
+.checkinPage {
+  min-height:100vh;
+  background:#fff;
+  color:var(--navy);
+}
+
+.checkinHeader {
+  height:92px;
+  background:#fff;
+  border-bottom:1px solid #e5e9ee;
+}
+
+.checkinHeaderInner {
+  max-width:1380px;
+  height:100%;
+  margin:auto;
+  padding:0 34px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.checkinBrand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  text-decoration:none;
+  color:var(--navy);
+}
+
+.checkinMark {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:50px;
+  line-height:.7;
+}
+
+.checkinBrand strong {
+  display:block;
+  font-family:Georgia,serif;
+  font-size:28px;
+  letter-spacing:4px;
+}
+
+.checkinBrand small {
+  display:block;
+  font-size:8px;
+  letter-spacing:5px;
+}
+
+.checkinHeader nav {
+  display:flex;
+  gap:28px;
+}
+
+.checkinHeader nav a {
+  color:var(--navy);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+}
+
+.checkinHero {
+  min-height:330px;
+  display:flex;
+  align-items:center;
+  padding:75px 34px;
+  background:
+    linear-gradient(90deg,#061b3d,#0b4f8f);
+  color:#fff;
+}
+
+.checkinHeroInner {
+  width:1180px;
+  margin:auto;
+}
+
+.checkinHero span {
+  color:#e9c767;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.checkinHero h1 {
+  margin:10px 0 14px;
+  font-family:Georgia,serif;
+  font-size:58px;
+  font-weight:400;
+}
+
+.checkinHero p {
+  max-width:620px;
+  color:#d6e2ee;
+  font-size:16px;
+  line-height:1.7;
+}
+
+.checkinLookup {
+  padding:0 34px;
+  background:var(--soft);
+}
+
+.checkinCard {
+  position:relative;
+  top:-55px;
+  max-width:1180px;
+  margin:auto;
+  padding:34px;
+  background:#fff;
+  box-shadow:0 16px 38px rgba(4,25,57,.14);
+}
+
+.checkinTitle > span {
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.checkinTitle h2 {
+  margin:7px 0 26px;
+  font-family:Georgia,serif;
+  font-size:31px;
+  font-weight:400;
+}
+
+.checkinFields {
+  display:grid;
+  grid-template-columns:1fr 1fr 220px;
+  gap:14px;
+  align-items:end;
+}
+
+.checkinFields label > span {
+  display:block;
+  margin-bottom:7px;
+  color:#536174;
+  font-size:11px;
+  font-weight:800;
+}
+
+.checkinFields input {
+  width:100%;
+  height:58px;
+  padding:0 15px;
+  border:1px solid #ccd6e0;
+  color:var(--navy);
+  font-size:15px;
+}
+
+.checkinFields button {
+  height:58px;
+  border:0;
+  background:var(--blue);
+  color:#fff;
+  font-weight:850;
+  cursor:pointer;
+}
+
+.checkinNote {
+  margin-top:18px;
+  color:#768493;
+  font-size:12px;
+}
+
+.checkinSteps {
+  padding:60px 34px 110px;
+  background:#fff;
+}
+
+.checkinStepsHeading {
+  max-width:1180px;
+  margin:0 auto 35px;
+}
+
+.checkinStepsHeading span {
+  color:var(--gold);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.checkinStepsHeading h2 {
+  margin:8px 0 0;
+  font-family:Georgia,serif;
+  font-size:42px;
+  font-weight:400;
+}
+
+.checkinStepGrid {
+  max-width:1180px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+
+.checkinStepGrid article {
+  min-height:210px;
+  padding:30px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.checkinStepGrid article > span {
+  color:var(--gold);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.checkinStepGrid h3 {
+  margin:10px 0 8px;
+  font-family:Georgia,serif;
+  font-size:23px;
+  font-weight:400;
+}
+
+.checkinStepGrid p {
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+@media(max-width:800px) {
+  .checkinHeader nav {
+    display:none;
+  }
+
+  .checkinFields {
+    grid-template-columns:1fr;
+  }
+
+  .checkinStepGrid {
+    grid-template-columns:1fr;
+  }
+
+  .checkinHero h1 {
+    font-size:43px;
+  }
+}

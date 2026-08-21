@@ -1,0 +1,575 @@
+:root {
+  --navy:#061b3d;
+  --blue:#0065bd;
+  --gold:#dca51c;
+  --line:#dfe5eb;
+  --muted:#687789;
+  --soft:#f6f7f8;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+}
+
+.managePage {
+  min-height:100vh;
+  background:#fff;
+  color:var(--navy);
+}
+
+.manageHeader {
+  height:92px;
+  background:#fff;
+  border-bottom:1px solid #e5e9ee;
+}
+
+.manageHeaderInner {
+  max-width:1380px;
+  height:100%;
+  margin:auto;
+  padding:0 34px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.manageBrand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  text-decoration:none;
+  color:var(--navy);
+}
+
+.manageMark {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:50px;
+  line-height:.7;
+}
+
+.manageBrand strong {
+  display:block;
+  font-family:Georgia,serif;
+  font-size:28px;
+  letter-spacing:4px;
+}
+
+.manageBrand small {
+  display:block;
+  font-size:8px;
+  letter-spacing:5px;
+}
+
+.manageHeader nav {
+  display:flex;
+  gap:28px;
+}
+
+.manageHeader nav a {
+  color:var(--navy);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+}
+
+.manageHero {
+  min-height:320px;
+  padding:80px 34px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,#061b3d,#0b4f8f);
+  color:#fff;
+}
+
+.manageHero > div {
+  width:1180px;
+  margin:auto;
+}
+
+.manageHero span {
+  color:#e9c767;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.manageHero h1 {
+  margin:10px 0 14px;
+  font-family:Georgia,serif;
+  font-size:58px;
+  font-weight:400;
+}
+
+.manageHero p {
+  max-width:650px;
+  color:#d6e2ee;
+  font-size:16px;
+  line-height:1.7;
+}
+
+.manageLookup {
+  padding:0 34px;
+  background:var(--soft);
+}
+
+.lookupCard {
+  position:relative;
+  top:-55px;
+  max-width:1180px;
+  margin:0 auto;
+  padding:34px;
+  background:#fff;
+  box-shadow:0 16px 38px rgba(4,25,57,.14);
+}
+
+.lookupHeading > span {
+  color:var(--blue);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.lookupHeading h2 {
+  margin:7px 0 26px;
+  font-family:Georgia,serif;
+  font-size:31px;
+  font-weight:400;
+}
+
+.lookupFields {
+  display:grid;
+  grid-template-columns:1fr 1fr 220px;
+  gap:14px;
+  align-items:end;
+}
+
+.lookupFields label > span {
+  display:block;
+  margin-bottom:7px;
+  color:#536174;
+  font-size:11px;
+  font-weight:800;
+}
+
+.lookupFields input {
+  width:100%;
+  height:58px;
+  padding:0 15px;
+  border:1px solid #ccd6e0;
+  font-size:15px;
+  color:var(--navy);
+}
+
+.lookupFields button {
+  height:58px;
+  border:0;
+  background:var(--blue);
+  color:#fff;
+  font-weight:850;
+  cursor:pointer;
+}
+
+.lookupHelp {
+  padding-top:18px;
+  color:#768493;
+  font-size:12px;
+}
+
+.manageActions {
+  padding:60px 34px 110px;
+  background:#fff;
+}
+
+.manageIntro {
+  max-width:1180px;
+  margin:0 auto 35px;
+}
+
+.manageIntro span {
+  color:var(--gold);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:4px;
+}
+
+.manageIntro h2 {
+  margin:8px 0 0;
+  font-family:Georgia,serif;
+  font-size:42px;
+  font-weight:400;
+}
+
+.manageActionGrid {
+  max-width:1180px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+
+.manageActionGrid article {
+  min-height:210px;
+  padding:30px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.actionIcon {
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  border:1px solid #d6e0e9;
+  border-radius:50%;
+  color:var(--blue);
+  font-size:20px;
+}
+
+.manageActionGrid h3 {
+  margin:17px 0 8px;
+  font-family:Georgia,serif;
+  font-size:23px;
+  font-weight:400;
+}
+
+.manageActionGrid p {
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+@media(max-width:800px) {
+  .manageHeader nav {
+    display:none;
+  }
+
+  .lookupFields {
+    grid-template-columns:1fr;
+  }
+
+  .manageActionGrid {
+    grid-template-columns:1fr;
+  }
+
+  .manageHero h1 {
+    font-size:43px;
+  }
+}
+
+/* =========================================================
+   WORKING BOOKING RESULT EXTRAS
+   ========================================================= */
+
+.bookingPassenger {
+  margin-top: 24px;
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid #dfe5eb;
+}
+
+.bookingPassenger span {
+  display: block;
+  margin-bottom: 5px;
+  color: #718096;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.bookingPassenger strong {
+  color: #061b3d;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.bookingActions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.bookingActions a {
+  min-height: 46px;
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #0065bd;
+  color: #ffffff;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.bookingActions a:last-child {
+  background: #061b3d;
+}
+
+/* =========================================================
+   SLA BOOKING RESULT — FINAL PRESENTATION
+   ========================================================= */
+
+.bookingResult {
+  margin-top: 30px !important;
+  padding: 32px !important;
+  background: #f8fafc !important;
+  border: 1px solid #d9e2ec !important;
+  border-radius: 4px;
+}
+
+.bookingResultTop {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #dce4ec;
+}
+
+.bookingResultTop > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingResultTop span {
+  display: block !important;
+  margin-bottom: 7px;
+  color: #718096 !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.8px;
+}
+
+.bookingResultTop strong {
+  display: block !important;
+  color: #071f45 !important;
+  font-family: Georgia, serif;
+  font-size: 26px !important;
+  line-height: 1.1;
+}
+
+.bookingResultTop b {
+  display: inline-flex !important;
+  align-items: center;
+  padding: 9px 14px !important;
+  background: #e8f6ed !important;
+  color: #23713b !important;
+  border-radius: 2px;
+  font-size: 10px !important;
+  letter-spacing: 1px;
+}
+
+/* Passenger */
+
+.bookingPassenger {
+  margin-top: 22px !important;
+  padding: 18px 20px !important;
+  background: #fff !important;
+  border: 1px solid #dce4ec !important;
+}
+
+.bookingPassenger span {
+  display: block !important;
+  margin-bottom: 7px !important;
+  color: #718096 !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px;
+}
+
+.bookingPassenger strong {
+  display: block !important;
+  color: #071f45 !important;
+  font-family: Georgia, serif;
+  font-size: 20px !important;
+  font-weight: 400;
+}
+
+/* Journey */
+
+.bookingJourney {
+  display: grid !important;
+  grid-template-columns: 1fr minmax(180px, 300px) 1fr !important;
+  align-items: center !important;
+  gap: 30px !important;
+
+  margin-top: 24px !important;
+  padding: 28px 20px !important;
+
+  background: #fff;
+  border: 1px solid #dce4ec;
+}
+
+.bookingJourney > div:first-child {
+  text-align: left !important;
+}
+
+.bookingJourney > div:last-child {
+  text-align: right !important;
+}
+
+.bookingJourney small {
+  display: block !important;
+  margin-bottom: 5px;
+  color: #718096 !important;
+  font-size: 12px !important;
+}
+
+.bookingJourney strong {
+  display: block !important;
+  margin: 4px 0 !important;
+
+  color: #071f45 !important;
+  font-family: Georgia, serif;
+  font-size: 34px !important;
+  line-height: 1 !important;
+}
+
+.bookingJourney > div:first-child > span,
+.bookingJourney > div:last-child > span {
+  display: block !important;
+  margin-top: 8px;
+  color: #071f45 !important;
+  font-size: 18px !important;
+  font-weight: 700;
+}
+
+.bookingJourneyLine {
+  text-align: center !important;
+}
+
+.bookingJourneyLine > span {
+  display: block;
+  color: #0068c9 !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px;
+}
+
+.bookingJourneyLine > div {
+  position: relative;
+  width: 100%;
+  height: 1px !important;
+  margin: 11px 0 !important;
+  background: #cbd6e2 !important;
+}
+
+.bookingJourneyLine > div::after {
+  content: "✈";
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-52%);
+
+  padding-left: 7px;
+  background: #fff;
+  color: #dca51c;
+  font-size: 15px;
+}
+
+.bookingJourneyLine small {
+  text-align: center;
+  font-size: 10px !important;
+}
+
+/* Booking information */
+
+.bookingDetails {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1px !important;
+
+  margin-top: 20px !important;
+  padding: 0 !important;
+
+  background: #dce4ec;
+  border: 1px solid #dce4ec;
+}
+
+.bookingDetails span {
+  display: flex !important;
+  align-items: center;
+
+  min-height: 58px;
+  padding: 14px 16px !important;
+
+  background: #fff !important;
+  border: 0 !important;
+
+  color: #536174 !important;
+  font-size: 12px !important;
+}
+
+/* Actions */
+
+.bookingActions {
+  display: flex !important;
+  gap: 12px !important;
+  margin-top: 22px !important;
+}
+
+.bookingActions a {
+  min-width: 140px;
+  min-height: 48px;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 22px !important;
+
+  background: #0872ce !important;
+  color: #fff !important;
+
+  text-decoration: none !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+.bookingActions a:last-child {
+  background: #071f45 !important;
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .bookingResult {
+    padding: 20px !important;
+  }
+
+  .bookingJourney {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bookingJourney > div {
+    text-align: left !important;
+  }
+
+  .bookingJourneyLine {
+    text-align: left !important;
+  }
+
+  .bookingDetails {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bookingActions {
+    flex-direction: column;
+  }
+
+  .bookingActions a {
+    width: 100%;
+  }
+}

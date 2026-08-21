@@ -74,10 +74,10 @@ export default function SLAV6() {
           <nav className="mainNav">
             <a href="#booking">BOOK</a>
             <a href="/manage-booking">MANAGE</a>
-            <a href="/experience">EXPERIENCE</a>
-            <a href="/destinations">DESTINATIONS</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#destinations">DESTINATIONS</a>
             <a href="/cargo">CARGO</a>
-            <a href="/rewards">SLA REWARDS</a>
+            <a href="#rewards">SLA REWARDS</a>
             <a href="#help">HELP</a>
           </nav>
 
@@ -105,20 +105,20 @@ export default function SLAV6() {
             Search flights
           </button>
 
-          <Link href="/manage-booking" className="bookingTabLink">
+          <button type="button">
             <span>◆</span>
             Manage booking / Check-in
-          </Link>
+          </button>
 
-          <Link href="/experience" className="bookingTabLink">
+          <button type="button">
             <span>◢</span>
             What's on your flight
-          </Link>
+          </button>
 
-          <Link href="/flight-status" className="bookingTabLink">
+          <button type="button">
             <span>◷</span>
             Flight status
-          </Link>
+          </button>
         </div>
 
         <div className="bookingProductRow">
@@ -143,50 +143,50 @@ export default function SLAV6() {
       <section className="slaServices">
         <div className="servicesGrid">
 
-          <a href="/services/hotels" className="serviceItem">
-            <span className="serviceIconBox">◇</span>
+          <a href="#" className="serviceItem">
+            <span className="serviceSymbol">▥</span>
             <strong>Hotels</strong>
             <small>Find places to stay</small>
           </a>
 
-          <a href="/services/car-rental" className="serviceItem">
-            <span className="serviceIconBox">◇</span>
+          <a href="#" className="serviceItem">
+            <span className="serviceSymbol">▰</span>
             <strong>Car Rental</strong>
             <small>Book your onward journey</small>
           </a>
 
-          <a href="/services/tours" className="serviceItem">
-            <span className="serviceIconBox">◇</span>
+          <a href="#" className="serviceItem">
+            <span className="serviceSymbol">◇</span>
             <strong>Tours & Activities</strong>
             <small>Discover more</small>
           </a>
 
-          <a href="/services/holidays" className="serviceItem">
-            <span className="serviceIconBox">◇</span>
+          <a href="#" className="serviceItem">
+            <span className="serviceSymbol">☀</span>
             <strong>Holidays</strong>
             <small>Plan a complete trip</small>
           </a>
 
-          <a href="/services/africa-experience" className="serviceItem featuredService">
-            <span className="serviceIconBox">◇</span>
+          <a href="#" className="serviceItem featuredService">
+            <span className="serviceSymbol">◎</span>
             <strong>Africa Experience</strong>
             <small>Culture, places and journeys</small>
           </a>
 
-          <a href="/services/chauffeur" className="serviceItem">
-            <span className="serviceIconBox">◇</span>
+          <a href="#" className="serviceItem">
+            <span className="serviceSymbol">♙</span>
             <strong>Chauffeur Drive</strong>
             <small>Premium ground travel</small>
           </a>
 
-          <a href="/services/meet-greet" className="serviceItem">
-            <span className="serviceIconBox">◇</span>
+          <a href="#" className="serviceItem">
+            <span className="serviceSymbol">◇</span>
             <strong>Meet & Greet</strong>
             <small>Airport assistance</small>
           </a>
 
-          <a href="/services/airport-transfers" className="serviceItem">
-            <span className="serviceIconBox">◇</span>
+          <a href="#" className="serviceItem">
+            <span className="serviceSymbol">▣</span>
             <strong>Airport Transfers</strong>
             <small>Door-to-airport travel</small>
           </a>
